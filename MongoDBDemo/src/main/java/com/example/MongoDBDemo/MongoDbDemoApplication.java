@@ -19,8 +19,8 @@ public class MongoDbDemoApplication implements CommandLineRunner{
 
 	void createStudentEntry() {
 		System.out.println("Data creation started...");
-		studentRepo.save(new Student("Abc", "Abc", 10));
-		studentRepo.save(new Student("Xyz", "Xyz", 15));
+		studentRepo.save(new Student("cde", "Anshu", 20));
+		studentRepo.save(new Student("fge", "Shabbir", 15));
 		System.out.println("Data creation complete...");
 	}
 
@@ -46,7 +46,7 @@ public class MongoDbDemoApplication implements CommandLineRunner{
 	@Override
     public void run(String[] args) { 
     System.out.println("-------------CREATE Student Entry------\n");
-    createStudentEntry();
+   // createStudentEntry();
 
     System.out.println("\n------------SHOW ALL Students---\n");
     showAllStudents();

@@ -17,9 +17,10 @@ public interface StudentRepo extends MongoRepository<Student, String> {
 	
 	@Query(value="{age:'?0'}", fields="{'name' : 1}")
 	List<Student> findAll(String category);
-
-
-
 	
+	//@Query(value="{'_id' : ?0}", delete = true)
+     public void deleteById(String id);
+
+	 public void deleteByName(String name);
 	
 }
